@@ -5,6 +5,10 @@ body{
     background-image: url(https://as1.ftcdn.net/v2/jpg/02/20/76/28/1000_F_220762865_x44kxk0IN1PJeJlAYXuXNcjh9hYOcdlQ.jpg);
 }
 
+header{
+    text-align: center;
+}
+
 img{
     margin-left: 1em;
     max-width: 90%;
