@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Solidity</title>
+</head>
+<body class="w3-light-grey">
+    <div class="object">
+    <header class="w3-container w3-center w3-padding-32">
+        <h1><b>Solidity</b></h1>
+        <p>Solidity est un langage orienté objet qui permet l'implémentation de smart contracts</p>
+    </header>
+    <div class="w3-container">
+        <h2><b>Smart contracts</b></h2>
+        <h3>Définition</h3>
+        <p>Les smart contracts, ou contrats intelligents, sont des programmes informatiques irrévocables, le plus souvent déployés sur une <a href="https://fr.wikipedia.org/wiki/Blockchain">blockchain</a>, 
+            qui exécutent un ensemble d’instructions pré-définies.</p>
+        <p>L’idée maîtresse derrière ce concept de smart contracts est de garantir la force obligatoire des contrats non plus par le droit, mais directement 
+            par le code informatique</p>
+        <p>
+            Le smart contract propose en quelque sorte un équivalent informatique du contrat papier. Durant l’exécution du  smart contract, toutes les étapes de validation 
+            sont enregistrées dans la blockchain utilisée (le plus souvent Ethereum), ce procédé permet de sécuriser l’ensemble des données en empêchant leur modification ou leur suppression a posteriori.
+        </p>
+        <p>
+            En pratique, l’immense majorité des smart contracts servent pour automatiser des échanges de valeur sous forme de cryptoactifs. Toutes les écritures comptables relatives 
+            à ces échanges de valeurs numériques sont systématiquement inscrites dans la blockchain. De la sorte tous les transferts d’actifs, sont à la fois publics, prévisibles et
+             irrévocables. N’importe qui peut vérifier sur la blockchain la bonne exécution du smart contract et déterminer à qui l’actif.
+        </p>
+        <img class="illustration" src="https://miro.medium.com/max/1170/1*AcymB7IKzQqf01LUHRn9pA.jpeg" alt="smart_contract_illustration">
+        <h3>Exemple d'un smart contract</h3>
+        <p>Dans l’univers des assurances, les smart contracts pourraient grandement faciliter les processus et nous débarrasser de formalités administratives, souvent considérées comme trop lourdes en France. 
+            Prenons un itinéraire de vol Ryanair :</p>
+        <p>Imaginons qu’au lieu de payer son vol en euros et par carte bancaire, un utilisateur choisisse d’acheter son billet en cryptomonnaie, avec par exemple des jetons Ethereum. Cette action ouvre de nouvelles 
+            possibilités pour Ryanair qui peut recourir à la technologie du smart contract pour incorporer à la transaction une assurance sur la blockchain. Dès lors, les données relatives au trajet et au client sont associées 
+            à cet achat et donc stockées de manière sécurisée sur la blockchain (Nom ; Prénom ; Référence du vol ; Adresse électronique Ethereum).</p>
+        <p>
+            Lors de l’acquisition de ce ticket, un contrat intelligent est créé entre Ryanair et le client, proposant d’indemniser l’utilisateur si un imprévu arrive durant le voyage. On imagine que le smart contract est directement
+             connecté à une base de données fiable. Ryanair peut par exemple employer des technologies d’intelligences artificielles pour tenir à jour cette base de données. Dans cette dernière, les informations principales des trajets 
+             comme les incidents, retards et annulations sont répertoriées.
+        </p>
+        <img class="illustration" src="https://static.latribune.fr/1741511/ryanair-releve-sa-prevision-de-trafic-annuel-perte-au-t1-moins-importante-que-prevu.jpg" alt="ryanair">
+        <p>
+            Si le voyage se déroule comme prévu, rien de spécifique ne se passe, l’utilisateur aura simplement payé son billet d'avion via un transfert de cryptomonnaies sur la blockchain. Cependant, si par exemple le trajet est supprimé, 
+            le client est automatiquement indemnisé sans avoir besoin de se lancer dans une procédure de remboursement. Le smart contract se met en marche automatiquement, car il détecte que la condition nécessaire à son exécution a été remplie.
+        </p>
+        <h3>Vous pouvez trouver <a href="https://cryptoactu.com/smart-contracts/">ici</a> quelques exemples de possibilités que pourraient permettre les contrats intelligents à l'avenir</h3>
+      </div>
+      <div class="w3-container">
+        <h2><b>Solidity</b></h2>
+        <p>Solidity a été initialement proposée en août 2014 par Gavin Wood ; le langage a ensuite été développé par l'équipe Solidity du projet Ethereum, dirigée par Christian Reitwiessner.</p>
+        <h3>Caractéristiques</h3>
+        <h4>Les bases</h4>
+        <ul>
+            <li>Solidity est un type de langage orienté objet (OO) comme C ++ et C #.</li>
+            <li>Il a été spécifiquement conçu pour développer des applications pour le réseau Ethereum.</li>
+            <li>Un avantage de ce langage est que le code source des programmes créés avec lui est accessible publiquement depuis la blockchain. 
+                Même en bytecode, il est possible de le décompiler et d'obtenir un échantillon assez clair du code source original.</li>
+            <li>Solidity prend en charge l'héritage et l'héritage multiple, lui conférant une grande souplesse lors de la programmation d'éléments complexes.</li>
+            <li>Ce langage fournit également une série de bibliothèques très utiles qui facilitent la programmation de contrats intelligents, rendant le code réutilisable et plus facile à entretenir.</li>
+        </ul>
+        <h4>Solidity, ça marche comment ?</h4>
+        <img class="scalable-img" src="ress/solidity_schema.drawio.svg" alt="">
+        <p>Les smart contract sont basés sur une blockchain (celle d'Ethereum par exemple dans la majorité des cas)</p>
+        <p>Les intéractions avec le contrat s'effectuent à partir de portefeuilles (wallet) en cryptomonnaie</p>
+        <p>Chaque portefeuille possède une adresse connue avec une valeur de 20 octets</p>
+        <p>Chaque intéraction avec le contrat intelligent coute du gas, c'est à dire des frais qui serviront à alimenter la blockchain (ils permettent la rémunération des mineurs) </p>
+        <h4>Qu’est-ce qu’on peut faire avec Solidity ?</h4>
+        <p>Au niveau des contrats, tout est envisageable. On peut imaginer toutes sortes d'échanges et de projets:</p>
+        <p>Un Smart contract écrit en Solidity est du code qui tourne sur la blockchain Ethereum.</p> 
+        <p>Solidity permet donc, par exemple, de créer des NFTs, des jeux vidéo, des plateformes de <a href="https://www.coinbase.com/fr/learn/crypto-basics/what-is-defi">DeFi</a>, organiser des <a href="https://www.forbes.com/sites/forbesfinancecouncil/2022/10/14/the-state-of-daos-and-what-that-can-mean-for-web3/?sh=530835f97f37">DAOs</a>, et toutes autres formes de projets web3.</p>
+        <h2>Tutoriel complet et détaillé</h2>
+        <h4>Installation et mise en place de l'environnement</h4>
+        <h5>a) Les differents compilateurs pour solidity</h5>
+        <p>Il existe de nombreux moyens d'installer des compilateurs pour solidity.</p>
+        <ul>
+            <li>Via Node.js <b>npm install -g solc</b></li>
+            <li>Via docker
+                <p>Solidity fournit des images dockers à jour pour le compilateur via l’image <b>solc</b> distribué par l’organisation ethereum</p>
+            </li>
+            <li>Via des paquets linux</li>
+            <li>Et également un compilateur supporté par le système macOS</li>
+        </ul>
+        <h5>b) Les différents outils pour tester nos contrats</h5>
+        <p>Avant le déploiement final de nos contrats sur la blockchain, il faut pouvoir les tester. Pour se faire, il existe un grand nombre d'outils de tests</p>
+        <p>Deux exemples d'outils:</p>
+        <ul>
+            <li><b><a href="https://github.com/TrueFiEng/Waffle">Waffle</a></b></li>
+            <li><b><a href="https://github.com/sc-forks/solidity-coverage">Solidity-coverage</a></b></li>
+        </ul>
+        <h5>c) Le déploiement du contrat</h5>
+        <p>Enfin, une fois notre contrat rédigé, compilé et testé il ne manque plus qu'à le déployer sur une blockchain.</p>
+        <p>Pour se faire, il existe des outils permettant de simuler des blockchain et des adresses afin de pouvoir travailler sur des versions locales de son contrat</p>
+        <ul>
+            <li><b><a href="https://tenderly.co/">Tenderly</a></b></li>
+            <li><b><a href="https://hardhat.org/hardhat-runner/docs/getting-started#overview">Hardhat</a></b></li>
+            <li><b><a href="https://trufflesuite.com/">Truffle</a></b></li>
+        </ul>
+        <h4>Comprendre solidity par l'exemple</h4>
+        <p>En tant que développeur, la meilleure façon de comprendre est de mettre la main à la patte. Alors il est temps de coder notre premier contrat intelligent !</p>
+        <p>Pour se faire, nous allons utiliser un outils proposé par ethereum rassemblant toutes les fonctionnalités décrite plus haut.</p>
+        <p>Il s'agit de <b><a href="https://remix.ethereum.org/">REMIX</a></b> un IDE en ligne, utilisé pour apprendre solidity et développer de simples contrats</p>
+        <p>REMIX possède: </p>
+            <p>Un gestionnaire de contrats</p>
+            <img src="ress/gestionnaire.png" alt="">
+            <p>Un compilateur qui prend en compte toutes les versions de solidity</p>
+            <img src="ress/compile.png" alt="">
+            <p>Une multitude de machines virtuelles permettant de simuler la blockchain éthereum et des wallet associés.</p>
+            <img src="ress/deploy.png" alt="">
+        <h5>a) Le but du contrat</h5>
+        Nous allons développer un contrat très simple. Les utilisateurs pourront envoyer de l'argent dessus, obtenir l'adresse du dernier envoyeur et obtenir le montant total d'argent envoyé sur le contrat.
+        <h5>b) Résultat</h5>
+        <p>Afin de mieux comprendre ce qui est attendu, nous allons commencer par la fin.</p>
+        <p>Le contrat désormais codé, nous pourrons l'observer en détail un peu plus tard.</p>
+        <hr>
+        <p>On choisit via REMIX une adresse ethereum de test. Elle possède 100 ether</p>
+        <img src="ress/choose_adress.png" alt="choisir_adresse">
+        <p>On choisit le montant d'ether que nous allons envoyer à notre contrat, ici 1 ether</p>
+        <img src="ress/choose_amount.png" alt="">
+        <p>On effectue la transaction</p>
+        <img src="ress/send.png" alt="">
+        <p>On peut voir qu'il ne me reste que 98,99 éther dans mon portefeuille, soit 1 éther envoyé plus les frais de gas</p>
+        <img src="ress/gas.png" alt="">
+        <p>Du coté du contrat en lui même, REMIX propose une simple interface avec deux boutons: getBalance et getLastPerson</p>
+        <p>Lorsque l'on clique sur getBalance nous pouvons voir que le contrat possède 1 éther dans sa balance, il s'agit de l'éther envoyé précédemment.</p>
+        <img src="ress/balance.png" alt="">
+        <p>Lorsque l'on clique sur getLastPerson, nous obtenons bien l'adresse avec laquelle nous avons envoyé l'éther.</p>
+        <img id="capture" src="ress/lastPerson.png" alt="">
+        <h5>d) Le code</h5>
+        <p>Nous avons pu voir comment fonctionnait REMIX, mais qu'en est-il du code derrière tout ça ?</p>
+        <img src="ress/code.png" alt="">
+        <p>Le code en lui même est plutôt simple, le langage se rapprochant de javascript. Quelques précisions sont tout de même nécéssaires:</p>
+        <ul>
+            <li>L'attribut <b>view</b> ligne 8 et 12 est un attribut propre à REMIX, il lui permet de lui indiquer que la méthode doit avoir une interface avec lequel l'utilisateur intéragira et dont le résultat sera également affiché, c'est ce qui est affiché sur <a href="#capture">la capture d'écran précédente</a></li>
+            <li>Le type <b>address</b> est un type propre au langage solidity, il fait référence aux adresses éthereum, une variable de type address est par défaut égale à <b> 0x0000000000000000000000000000000000000000</b></li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <h3>a) Le rêve du web3</h3>
+        <p>Le web3 et tout ce qui en découle fait rêver, bien qu'il ait sont lot de détracteur comme de fidèle, le développement et les avancées des technologies blockchain sont indéniables. Solidity est le rapport à la réalité de tout ce monde légèrement fantasmé, Le langage, lui,  est bien réel et le développement des smart contracts de plus en plus accessible.</p>
+        <p>Pour ceux qui croient en l'avenir des technologies blockchain et du web3, solidity est pour un développeur une bonne façon d'entrer dans ce futur marché au potentiel encore trop peu connu et quasi-infini.
+            Bien que l'avenir de ce monde soit encore trop incertain, l'accessibilité de Solidity, proche de celle de javascript, est trop grande pour être ignorée. Peut-être que dans 10 ans, toutes les choses que l'on connaît aujourd'hui se baseront sur la blockchain et des langages comme Solidity. 
+        </p>
+        <h3>b) Retour à la réalité</h3>
+        <p>Maintenant, revenons un peu sur terre.</p>
+        <p>Peu importe ce qui est réservé à ce monde, Solidity est un langage de plus en plus solicité par les entreprises, le langage étant encore peu connu et peu pratiqué, il peut être une bonne idée de s'y intéresser, déjà d'un point de vue de veille technologique, ensuite pour le marché du travail, sur lequel la demande est grandissante.</p>
+        <h2>Bibliographie</h2>
+        <p><a href="https://www.commentcoder.com/apprendre-solidity/">commentcoder.com</a>: site très intéressant et très complet avec beaucoup de tutoriels</p>
+        <p><a href="https://www.commentcoder.com/apprendre-solidity/">Documentation officielle de solidity</a>: Très complète et traduite dans de multiples langages</p>
+        <a href="https://fr.wikipedia.org/wiki/Solidity">https://fr.wikipedia.org/wiki/Solidity</a>
+        <a href="https://journalducoin.com/ethereum/solidity-langage-ethereum/">https://journalducoin.com/ethereum/solidity-langage-ethereum/</a><p></p>
+        <a href="https://www.youtube.com/watch?v=xtEQGtaT9MY&list=PLBV4f2pTYexqgdiVpLOWlF-E5sTLPimot">https://www.youtube.com/watch?v=xtEQGtaT9MY&list=PLBV4f2pTYexqgdiVpLOWlF-E5sTLPimot</a>
+      </div>   
+    </div>
+</div> 
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    font: 20px/25px sans-serif;
+    background-attachment: fixed;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/02/20/76/28/1000_F_220762865_x44kxk0IN1PJeJlAYXuXNcjh9hYOcdlQ.jpg);
+}
+
+img{
+    margin-left: 1em;
+    max-width: 90%;
+}
+
+h4{
+    font: 26px/25px sans-serif;
+    font-weight: bold;
+}
+
+h5{
+    font: 24px/25px sans-serif;
+}
+
+.object{
+    background-color: white;
+    padding: 1em;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+.illustration{
+    max-width: 60%;
+}
